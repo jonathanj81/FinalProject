@@ -1,0 +1,28 @@
+Warning: Google App Engine Java 7 runtime is deprecated.
+Warning: See https://cloud.google.com/appengine/docs/deprecations/java7
+Sep 08, 2018 1:06:37 PM java.util.prefs.WindowsPreferences <init>
+WARNING: Could not open/create prefs root node Software\JavaSoft\Prefs at root 0x80000002. Windows RegCreateKeyEx(...) returned error code 5.
+Sep 08, 2018 1:06:38 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
+INFO: Overwriting system property key 'java.util.logging.config.file', value 'C:\Program Files (x86)\Google\Cloud SDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties' with value 'WEB-INF/logging.properties' from 'C:\Users\Jon\AndroidStudioProjects\FinalProject\backend\build\exploded-backend\WEB-INF\appengine-web.xml'
+Sep 08, 2018 1:06:39 PM com.google.apphosting.utils.jetty.JettyLogger info
+INFO: Logging to JettyLogger(null) via com.google.apphosting.utils.jetty.JettyLogger
+Sep 08, 2018 5:06:40 PM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
+WARNING: Your working directory, (C:\Users\Jon\AndroidStudioProjects\FinalProject\backend) is not equal to your 
+web application root (C:\Users\Jon\AndroidStudioProjects\FinalProject\backend\build\exploded-backend)
+You will not be able to access files from your working directory on the production server.
+
+Sep 08, 2018 5:06:41 PM com.google.apphosting.utils.jetty.JettyLogger info
+INFO: jetty-6.1.x
+Sep 08, 2018 5:06:45 PM com.google.apphosting.utils.jetty.JettyLogger info
+INFO: Started SelectChannelConnector@0.0.0.0:8080
+Sep 08, 2018 5:06:45 PM com.google.appengine.tools.development.AbstractModule startup
+INFO: Module instance default is running at http://localhost:8080/
+Sep 08, 2018 5:06:45 PM com.google.appengine.tools.development.AbstractModule startup
+INFO: The admin console is running at http://localhost:8080/_ah/admin
+Sep 08, 2018 1:06:45 PM com.google.appengine.tools.development.DevAppServerImpl doStart
+INFO: Dev App Server is now running
+Sep 08, 2018 1:10:19 PM com.google.appengine.tools.development.AbstractModule shutdown
+INFO: Shutting down module instance default
+Shutting down.
+Sep 08, 2018 1:10:19 PM com.google.appengine.api.datastore.dev.LocalDatastoreService cleanupActiveServices
+INFO: scheduler shutting down.
