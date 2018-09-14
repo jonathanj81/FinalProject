@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.test.espresso.idling.CountingIdlingResource;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -62,9 +63,6 @@ public class MainActivityFragment extends Fragment {
             if(myApiService == null) {  // Only do this once
                 MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(),
                         new AndroidJsonFactory(), null)
-                        // options for running against local devappserver
-                        // - 10.0.2.2 is localhost's IP address in Android emulator
-                        // - turn off compression when running against local devappserver
                         .setRootUrl("http://192.168.0.4:8080/_ah/api/")
                         .setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
                             @Override
@@ -72,7 +70,6 @@ public class MainActivityFragment extends Fragment {
                                 abstractGoogleClientRequest.setDisableGZipContent(true);
                             }
                         });
-                // end options for devappserver
 
                 myApiService = builder.build();
             }
@@ -80,7 +77,8 @@ public class MainActivityFragment extends Fragment {
             try {
                 return myApiService.findJoke().execute().getData();
             } catch (IOException e) {
-                return e.getMessage();
+                Log.i("JOKE-CONNECT-ERROR", e.getMessage());
+                return "";
             }
         }
 

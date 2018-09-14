@@ -49,8 +49,7 @@ public class BackendReturnDataTest {
     public void idlingResourceTest() {
         onView(withId(R.id.joke_button)).perform(click());
 
-        assertNotEquals("connection refused", MainActivityFragment.mJokeText);
-        assertNotEquals("connect timed out", MainActivityFragment.mJokeText);
+        assertNotEquals("", MainActivityFragment.mJokeText);
         assertNotNull(MainActivityFragment.mJokeText);
     }
 
