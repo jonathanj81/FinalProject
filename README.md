@@ -1,3 +1,6 @@
+- Replace ip address in setRootUrl method within MainActivityFragment with appropriate local ip address.
+- Optional components interstitial ad and custom gradle task not implemented.
+
 # Gradle for Android and Java Final Project
 
 In this project, you will create an app with multiple flavors that uses
